@@ -109,7 +109,7 @@ jobs:
           # Update version in Dockerfile
           sed -i "s/ARG BUILDX_VERSION=$current_version/ARG BUILDX_VERSION=$latest_version/g" ./images/Dockerfile
       
-      - name: Commit changes and create Pull Request
+      - name:        Commit changes and create Pull Request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
